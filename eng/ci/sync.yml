@@ -1,0 +1,6 @@
+steps:
+- bash: |
+    git push --force https://$(GITHUB_PAT)@github.com/Evobolics/Evo.Evosect HEAD:main
+        
+  displayName: 'Sync with Github'
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
